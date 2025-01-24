@@ -1,0 +1,42 @@
+/* Navbar */
+.custom-navbar {
+    background-color: #013220;
+}
+
+.navbar-brand {
+    color: #f0e68c;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f0e68c;
+}
+
+.btn-gold {
+    background-color: #f0e68c;
+    color: #013220;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.btn-gold:hover {
+    background-color: #d4b545;
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar .fa-brands:hover {
+    color: #f0e68c;
+}
