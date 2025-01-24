@@ -1,25 +1,29 @@
-/* Navbar */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*Navbar*/
 .custom-navbar {
-    background-color: #013220;
+    background: #013220;
+    box-shadow: none;
 }
 
-.navbar-brand {
-    color: #f0e68c;
-    font-weight: bold;
+.img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.navbar-nav .nav-link {
-    color: #ffffff;
-    font-size: 0.9rem;
-    margin-right: 1rem;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f0e68c;
+.nav-link,
+.navbar-brand,
+.btn-gold {
+    color: #fff !important;
 }
 
 .btn-gold {
-    background-color: #f0e68c;
+    background-color: #aaa049;
     color: #013220;
     border: none;
     font-size: 0.9rem;
@@ -33,10 +37,65 @@
     color: #ffffff;
 }
 
-.navbar-toggler {
-    border: none;
+.social-container {
+    gap: 1rem;
 }
 
-.navbar .fa-brands:hover {
-    color: #f0e68c;
+.social-container i {
+    font-size: 1.5rem;
+}
+
+/* Personalização do ícone do botão de colapso */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(240, 230, 140, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 5px rgba(240, 230, 140, 0.8);
+}
+
+
+/* responsividade */
+@media (max-width: 768px) {
+    .custom-navbar .nav-link {
+        text-align: center;
+    }
+
+    .social-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-container a {
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        justify-content: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .d-lg-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .d-lg-flex .btn-gold {
+        margin-top: 15px;
+    }
 }
