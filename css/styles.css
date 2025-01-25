@@ -120,9 +120,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Escurece a imagem */
     border-radius: 10px;
-    z-index: 1; /* Garante que o texto fique acima da sobreposição */
+    z-index: 1;
+    /* Garante que o texto fique acima da sobreposição */
     transition: background-color .3s ease;
 }
 
@@ -165,6 +167,80 @@ body {
 .btn-gold:hover {
     background-color: #d4b545;
     color: #ffffff;
+}
+
+/* ExpoTV */
+.expo-tv {
+    background-color: #f7f1be;
+    padding: 50px 0;
+}
+
+.expo-tv h2 {
+    font-size: 2.5rem;
+    color: #013220;
+    font-weight: 400;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.expo-tv i {
+    margin-top: 5px;
+}
+
+.video-maior {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-maior img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-menor {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px; /* Altura fixa para vídeos menores */
+}
+
+.video-menor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #d4b545;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.video-maior:hover .play-overlay,
+.video-menor:hover .play-overlay {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.video-maior:hover img,
+.video-menor:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 /* responsividade */
