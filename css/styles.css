@@ -2,6 +2,13 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
 }
 
 /*Navbar*/
@@ -270,6 +277,17 @@ body {
 /*Placeholder imagem*/
 .placeholder-img {
     padding: 40px;
+}
+
+/*Footer*/
+
+.rodape {
+    background-color: #141414;
+    padding: 50px;
+}
+
+.rodape h6, p {
+    color: #fff;
 }
 
 /* responsividade */
