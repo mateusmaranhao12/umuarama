@@ -19,7 +19,19 @@ body {
 .nav-link,
 .navbar-brand,
 .btn-gold {
-    color: #fff !important;
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #aaa049;
+}
+
+.navbar i {
+    transition: color .3s ease;
+}
+
+.navbar i:hover {
+    color: #aaa049;
 }
 
 .btn-gold {
@@ -61,7 +73,6 @@ body {
 .navbar-toggler:focus {
     box-shadow: 0 0 5px rgba(240, 230, 140, 0.8);
 }
-
 
 /* responsividade */
 @media (max-width: 768px) {
