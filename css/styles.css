@@ -267,6 +267,11 @@ body {
     filter: grayscale(0%);
 }
 
+/*Placeholder imagem*/
+.placeholder-img {
+    padding: 40px;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
     .custom-navbar .nav-link {
@@ -305,5 +310,11 @@ body {
 
     .galeria h2 {
         text-align: center;
+    }
+
+    .placeholder-img {
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
