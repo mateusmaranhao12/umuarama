@@ -243,6 +243,30 @@ body {
     cursor: pointer;
 }
 
+/*Galeria de fotos*/
+.galeria {
+    padding: 20px;
+    background-color: #005a39;
+}
+
+.galeria h2 {
+    color: #fff;
+}
+
+.galeria img {
+    object-fit: cover;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: filter .3s ease;
+}
+
+.galeria img:hover {
+    filter: grayscale(0%);
+}
+
 /* responsividade */
 @media (max-width: 768px) {
     .custom-navbar .nav-link {
@@ -277,5 +301,9 @@ body {
 
     .d-lg-flex .btn-gold {
         margin-top: 15px;
+    }
+
+    .galeria h2 {
+        text-align: center;
     }
 }
