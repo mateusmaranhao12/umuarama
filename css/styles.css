@@ -74,6 +74,99 @@ body {
     box-shadow: 0 0 5px rgba(240, 230, 140, 0.8);
 }
 
+/*Imagens*/
+.row.no-glutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-md-3 {
+    padding: 0;
+}
+
+/*Ultimas noticias*/
+.ultimas-noticias {
+    background-color: #f8f8f8;
+}
+
+.ultimas-noticias h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.ultimas-noticias .atualizacoes {
+    font-size: 1rem;
+    color: #666;
+}
+
+.noticia-card {
+    position: relative;
+}
+
+.noticia-card img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Sobreposição escura */
+.noticia-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Escurece a imagem */
+    border-radius: 10px;
+    z-index: 1; /* Garante que o texto fique acima da sobreposição */
+    transition: background-color .3s ease;
+}
+
+.noticia-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a imagem maior */
+.noticia-card-grande {
+    height: 100%;
+}
+
+.noticia-card-grande img {
+    height: 380px;
+}
+
+.noticia-texto {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #fff;
+    z-index: 2;
+}
+
+/* Estilo do botão */
+.btn-gold {
+    background-color: #f0e68c;
+    color: #013220;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+}
+
+.btn-gold:hover {
+    background-color: #d4b545;
+    color: #ffffff;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
     .custom-navbar .nav-link {
