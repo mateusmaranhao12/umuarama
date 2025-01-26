@@ -8,7 +8,8 @@ body {
 }
 
 .main-content {
-    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    flex: 1;
+    /* Faz o conteúdo principal ocupar o espaço restante */
 }
 
 /*Navbar*/
@@ -215,7 +216,8 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 300px; /* Altura fixa para vídeos menores */
+    height: 300px;
+    /* Altura fixa para vídeos menores */
 }
 
 .video-menor img {
@@ -286,8 +288,43 @@ body {
     padding: 50px;
 }
 
-.rodape h6, p {
+.rodape h6,
+p {
     color: #fff;
+}
+
+/*Textos*/
+.textos {
+    padding: 20px;
+}
+
+.textos h1 {
+    color: #013220;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.textos p {
+    color: #00200d;
+    font-size: 1.5rem;
+}
+
+.textos .img-banner {
+    display: flex;
+    justify-content: end;
+}
+
+.textos .img-banner-2 {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 600px;
+}
+
+.textos small {
+    color: #00200d;
+    font-size: 0.9rem;
+    display: block;
+    text-align: left;
 }
 
 /* responsividade */
@@ -334,5 +371,18 @@ body {
         padding: 0;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .textos h1 {
+        font-size: 100%;
+    }
+
+    .textos p {
+        font-size: 100%;
+    }
+
+    .textos .img-banner {
+        display: flex;
+        justify-content: center;
     }
 }
