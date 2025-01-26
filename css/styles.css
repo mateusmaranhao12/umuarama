@@ -327,6 +327,125 @@ p {
     text-align: left;
 }
 
+/* Seção Quero Ver Mais */
+.quero-ver-mais {
+    background-color: #ffffff;
+}
+
+.quero-ver-mais .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.quero-ver-mais .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.quero-ver-mais .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    opacity: 1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.quero-ver-mais .card:hover .card-overlay {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.quero-ver-mais .card:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo da seção de galeria */
+.galeria-imagens-blog {
+    background-color: #ffffff;
+}
+
+.galeria-imagens-blog h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.galeria-imagens-blog .img-principal {
+    position: relative;
+}
+
+.galeria-imagens-blog .img-principal img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: auto;
+}
+
+.galeria-imagens-blog .img-principal .descricao {
+    margin-top: 10px;
+}
+
+.galeria-imagens-blog .img-principal .descricao p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.galeria-imagens-blog .img-principal .descricao .btn {
+    margin-top: 10px;
+}
+
+.galeria-imagens-blog .miniaturas img {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 185px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.galeria-imagens-blog .miniaturas img:hover {
+    transform: scale(1.05);
+    /* Zoom ao passar o mouse */
+}
+
+.galeria-imagens-blog .navegacao {
+    border-top: 1px solid #333;
+}
+
+.galeria-imagens-blog .navegacao a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.galeria-imagens-blog .navegacao a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.galeria-imagens-blog .navegacao .btn-link i {
+    font-size: 1.1rem;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
     .custom-navbar .nav-link {
@@ -384,5 +503,9 @@ p {
     .textos .img-banner {
         display: flex;
         justify-content: center;
+    }
+
+    .galeria-imagens-blog .btn-outline-secondary {
+        margin-bottom: 30px;
     }
 }
