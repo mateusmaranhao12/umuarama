@@ -190,7 +190,7 @@
                 <!-- Vídeo Principal -->
                 <div class="row mb-4">
                     <div class="col-md-12">
-                        <div class="video-maior">
+                        <div class="video-maior" data-bs-toggle="modal" data-bs-target="#videoPrincipalModal">
                             <img class="img-fluid rounded" src="./imgs/Parque-Crianca-77.jpg" alt="Vídeo Principal">
                             <div class="play-overlay">
                                 <i class="fa-regular fa-circle-play"></i>
@@ -201,7 +201,7 @@
                 <!-- Vídeos Menores -->
                 <div class="row g-3">
                     <div class="col-md-4">
-                        <div class="video-menor">
+                        <div class="video-menor" data-bs-toggle="modal" data-bs-target="#video1Modal">
                             <img class="img-fluid rounded" src="./imgs/Abertura-Rodeio-13-03-144 copy.jpg"
                                 alt="Vídeo 1">
                             <div class="play-overlay">
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="video-menor">
+                        <div class="video-menor" data-bs-toggle="modal" data-bs-target="#video2Modal">
                             <img class="img-fluid rounded" src="./imgs/Gusttavo Lima-130 copy.jpg" alt="Vídeo 2">
                             <div class="play-overlay">
                                 <i class="fa-regular fa-circle-play"></i>
@@ -218,7 +218,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="video-menor">
+                        <div class="video-menor" data-bs-toggle="modal" data-bs-target="#video3Modal">
                             <img class="img-fluid rounded" src="./imgs/H&G-11 copy.jpg" alt="Vídeo 3">
                             <div class="play-overlay">
                                 <i class="fa-regular fa-circle-play"></i>
@@ -228,6 +228,76 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modais para vídeos -->
+        <!-- Modal do Vídeo Principal -->
+        <div class="modal fade" id="videoPrincipalModal" tabindex="-1" aria-labelledby="videoPrincipalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="./videos/bioohub - Google Chrome 2024-09-21 22-11-56.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Vídeo 1 -->
+        <div class="modal fade" id="video1Modal" tabindex="-1" aria-labelledby="video1Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="./videos/DASHGREEN - Google Chrome 2024-12-04 14-05-53.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Vídeo 2 -->
+        <div class="modal fade" id="video2Modal" tabindex="-1" aria-labelledby="video2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="./videos/Noticias - Google Chrome 2024-11-26 15-02-09.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Vídeo 3 -->
+        <div class="modal fade" id="video3Modal" tabindex="-1" aria-labelledby="video3Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <video controls width="100%">
+                            <source src="./videos/zap-facil - Google Chrome 2025-01-18 15-03-04.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--Galeria de fotos-->
         <section class="galeria">
