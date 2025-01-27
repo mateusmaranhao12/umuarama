@@ -83,6 +83,11 @@ body {
 }
 
 /*Imagens*/
+.img-index {
+    max-width: 1920px;
+    max-height: 1080px;
+}
+
 .row.no-glutters {
     margin-left: 0;
     margin-right: 0;
@@ -92,9 +97,79 @@ body {
     padding: 0;
 }
 
+.custom-carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.custom-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.custom-carousel-item {
+    flex: 0 0 25%;
+    /* Exibe 4 imagens no desktop */
+    box-sizing: border-box;
+}
+
+.custom-carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.custom-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.custom-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.custom-indicator.active {
+    background-color: #333;
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+    .custom-carousel-item {
+        flex: 0 0 100%;
+        /* Exibe 1 imagem por vez no mobile */
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 100%;
+        /* 1 imagem no mobile */
+    }
+}
+
 /*Ultimas noticias*/
-.ultimas-noticias {
+.ultimas-noticias-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Faz com que ocupe toda a altura da viewport */
+    padding: 20px;
+    /* Adiciona espaçamento interno */
     background-color: #f8f8f8;
+}
+
+.ultimas-noticias {
+    max-width: 1300px;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .ultimas-noticias h2 {
@@ -177,9 +252,24 @@ body {
     color: #ffffff;
 }
 
+.btn-gold-2 {
+    background-color: #d4b545;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+}
+
+.btn-gold-2:hover {
+    background-color: #f0e68c;
+    color: #013220;
+}
+
 /* ExpoTV */
 .expo-tv {
-    background-color: #f7f1be;
+    background-color: #d6d6d6;
     padding: 50px 0;
 }
 
@@ -279,13 +369,14 @@ body {
 /*Placeholder imagem*/
 .placeholder-img {
     padding: 40px;
+    background-color: #f4f4f4;
 }
 
 /*Footer*/
 
 .rodape {
     background-color: #141414;
-    padding: 50px;
+    padding: 20px;
 }
 
 .rodape h6,

@@ -41,7 +41,8 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="./imgs/LOGO EXPO 50 ANOS - DOURADO.png" alt="Logo" class="me-2" style="height: 150px;">
+                    <img src="./imgs/LOGO EXPO 50 ANOS - BRANCO COM DOURADO.png" alt="Logo" class="me-2"
+                        style="height: 150px;">
                 </a>
 
                 <!-- Botão de Colapso -->
@@ -101,81 +102,102 @@
         </nav>
 
         <!--Imagem index-->
-        <img class="img-fluid" src="./imgs/BANNER_TOPO.jpg">
+        <div class="img-index">
+            <img class="img-fluid" src="./imgs/BANNER_TOPO.jpg">
+        </div>
 
-        <!--Imagens-->
-        <div class="row no-glutters">
-            <div class="col-md-3">
-                <img class="img-fluid" src="./imgs/BANNER_1_HOME.jpg">
+        <!-- Carousel Imagens -->
+        <div class="custom-carousel-container">
+            <div class="custom-carousel-track">
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_1_HOME.jpg" alt="Imagem 1">
+                </div>
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_2_HOME.jpg" alt="Imagem 2">
+                </div>
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_4.jpg" alt="Imagem 3">
+                </div>
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_3.jpg" alt="Imagem 4">
+                </div>
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_1_HOME.jpg" alt="Imagem 5">
+                </div>
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_2_HOME.jpg" alt="Imagem 6">
+                </div>
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_4.jpg" alt="Imagem 7">
+                </div>
+                <div class="custom-carousel-item">
+                    <img src="./imgs/BANNER_3.jpg" alt="Imagem 8">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img class="img-fluid" src="./imgs/BANNER_2_HOME.jpg">
-            </div>
-            <div class="col-md-3">
-                <img class="img-fluid" src="./imgs/BANNER_3.jpg">
-            </div>
-            <div class="col-md-3">
-                <img class="img-fluid" src="./imgs/BANNER_4.jpg">
+            <div class="custom-carousel-indicators">
+                <!-- Os indicadores são gerados dinamicamente pelo JavaScript -->
             </div>
         </div>
 
         <!--Ultimas noticias-->
-        <section class="ultimas-noticias py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Texto à esquerda -->
-                    <div class="col-md-4">
-                        <h2 class="mb-3">Últimas Notícias</h2>
-                        <p class="atualizacoes">Confira todas as atualizações da Expo Umuarama</p>
-                    </div>
-                    <!-- Cards à direita -->
-                    <div class="col-md-8">
-                        <div class="row g-3">
-                            <!-- Imagem maior à direita -->
-                            <div class="col-md-5">
-                                <div class="noticia-card noticia-card-grande">
-                                    <img class="img-fluid rounded" src="./imgs/Julgamento-28 copy.jpg"
-                                        alt="Notícia Maior">
-                                    <p class="noticia-texto">Centenas de pessoas participam do lançamento da Expo 2024
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Outras imagens embaixo -->
-                            <div class="col-md-7">
-                                <div class="row g-3">
-                                    <div class="col-6">
-                                        <div class="noticia-card">
-                                            <img class="img-fluid rounded" src="./imgs/Parque-Crianca-58.jpg"
-                                                alt="Notícia 1">
-                                            <p class="noticia-texto">Centenas de pessoas participam do lançamento da
-                                                Expo
-                                                2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="noticia-card">
-                                            <img class="img-fluid rounded" src="./imgs/ARENA.jpg" alt="Notícia 2">
-                                            <p class="noticia-texto">Centenas de pessoas participam da Expo 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="noticia-card">
-                                            <img class="img-fluid rounded" src="./imgs/Palestra 11-03-1 copy.jpg"
-                                                alt="Notícia 3">
-                                            <p class="noticia-texto">Centenas de pessoas participam da Expo 2024</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="ultimas-noticias-wrapper">
+            <section class="ultimas-noticias d-flex py-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Texto à esquerda -->
+                        <div class="col-md-12">
+                            <h2 class="mb-3">Últimas Notícias</h2>
+                            <p class="atualizacoes">Confira todas as atualizações da Expo Umuarama</p>
                         </div>
-                        <!-- Botão -->
-                        <div class="text-center mt-4">
-                            <a href="#" class="btn btn-gold text-uppercase">Quero ver mais</a>
+                        <!-- Cards à direita -->
+                        <div class="col-md-12">
+                            <div class="row g-3">
+                                <!-- Imagem maior à direita -->
+                                <div class="col-md-5">
+                                    <div class="noticia-card noticia-card-grande">
+                                        <img class="img-fluid rounded" src="./imgs/Julgamento-28 copy.jpg"
+                                            alt="Notícia Maior">
+                                        <p class="noticia-texto">Centenas de pessoas participam do lançamento da Expo
+                                            2024</p>
+                                    </div>
+                                </div>
+                                <!-- Outras imagens embaixo -->
+                                <div class="col-md-7">
+                                    <div class="row g-3">
+                                        <div class="col-6">
+                                            <div class="noticia-card">
+                                                <img class="img-fluid rounded" src="./imgs/Parque-Crianca-58.jpg"
+                                                    alt="Notícia 1">
+                                                <p class="noticia-texto">Centenas de pessoas participam do lançamento da
+                                                    Expo
+                                                    2024</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="noticia-card">
+                                                <img class="img-fluid rounded" src="./imgs/ARENA.jpg" alt="Notícia 2">
+                                                <p class="noticia-texto">Centenas de pessoas participam da Expo 2024</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="noticia-card">
+                                                <img class="img-fluid rounded" src="./imgs/Palestra 11-03-1 copy.jpg"
+                                                    alt="Notícia 3">
+                                                <p class="noticia-texto">Centenas de pessoas participam da Expo 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Botão -->
+                            <div class="text-center mt-4">
+                                <a href="#" class="btn btn-gold-2 text-uppercase">Quero ver mais</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- ExpoTV -->
         <section class="expo-tv py-5">
@@ -342,7 +364,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col d-flex">
-                        <img class="img-fluid" src="./imgs/additional-support-1.jpg">
+                        <img class="img-fluid" src="./imgs/TODAS AS LOGOS.png">
                     </div>
                 </div>
             </div>
@@ -353,7 +375,11 @@
     <footer class="rodape">
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <img class="img-fluid" src="./imgs/LOGO EXPO 50 ANOS - BRANCO COM DOURADO.png"
+                        style="height: 150px; width: 150px;">
+                </div>
+                <div class="col-md-4 text-center">
                     <h6 class="mb-3">49ª Exposição Agropecuária, Comercial e Industrial
                         de Umuarama/22ª Feira Internacional</h6>
                     <p>Sociedade Rural de Umuarama
@@ -362,8 +388,10 @@
                         CEP 87502-970
                         Umuarama – Paraná - Brasil</p>
                 </div>
-                <div class="col-md-7 d-flex align-items-center justify-content-center">
-                    <p>Fone: +55 44 361 9500</p>
+                <div class="col-md-4 text-center">
+                    <h6 class="mb-4">Contatos:</h6>
+                    <p>WhatsApp: 44 99867-0431</p>
+                    <p>Telefone fixo: 44 3621-9500</p>
                 </div>
             </div>
         </div>
