@@ -12,15 +12,24 @@ body {
     /* Faz o conteúdo principal ocupar o espaço restante */
 }
 
-/*Navbar*/
 .custom-navbar {
-    background: #013220;
-    box-shadow: none;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.custom-navbar-2 {
+    background: rgb(0, 51, 23);
 }
 
 .img-fluid {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    /* Faz a imagem ocupar toda a altura da janela */
+    object-fit: cover;
+    /* Garante que a imagem seja ajustada corretamente */
     display: block;
 }
 
@@ -57,14 +66,6 @@ body {
     color: #ffffff;
 }
 
-.social-container {
-    gap: 1rem;
-}
-
-.social-container i {
-    font-size: 1.5rem;
-}
-
 /* Personalização do ícone do botão de colapso */
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
@@ -81,6 +82,72 @@ body {
 .navbar-toggler:focus {
     box-shadow: 0 0 5px rgba(240, 230, 140, 0.8);
 }
+
+/*Icones de navegação do banner topo*/
+.hero-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 100vh;
+    /* Ocupa toda a altura da viewport */
+}
+
+.carousel {
+    display: flex;
+    height: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navigation-icons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.navigation-icons i {
+    cursor: pointer;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.navigation-icons i:hover {
+    opacity: 1;
+}
+
+/* Ajustes para telas mobile */
+@media (max-width: 768px) {
+    .hero-container {
+        height: auto;
+    }
+
+    .hero-image {
+        height: auto;
+        object-fit: contain;
+        /* Mostra a imagem inteira em mobile */
+    }
+
+    .navigation-icons {
+        top: auto;
+        bottom: 20px;
+    }
+}
+
 
 /*Imagens*/
 

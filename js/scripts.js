@@ -72,3 +72,37 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCarousel()
     autoSlideTimeout = setTimeout(autoSlide, 5000) // Inicia o temporizador
 })
+
+//imagem index
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track')
+    const images = document.querySelectorAll('.hero-image')
+    const prevButton = document.querySelector('.prev')
+    const nextButton = document.querySelector('.next')
+
+    let currentIndex = 0
+    const totalImages = images.length
+
+    function updateCarousel() {
+        const slideWidth = images[0].offsetWidth
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`
+    }
+
+    // Evento para o botão anterior
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1
+        updateCarousel()
+    })
+
+    // Evento para o botão próximo
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0
+        updateCarousel()
+    })
+
+    // Atualiza o carrossel ao redimensionar
+    window.addEventListener('resize', updateCarousel)
+
+    // Inicializa o carrossel
+    updateCarousel()
+})
