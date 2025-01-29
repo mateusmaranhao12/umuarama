@@ -614,6 +614,14 @@ p {
     display: none;
 }
 
+.placeholder-img .desktop {
+    display: block;
+}
+
+.placeholder-img .mobile {
+    display: none;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
 
@@ -627,6 +635,14 @@ p {
     }
 
     .hero-image.mobile {
+        display: block;
+    }
+
+    .placeholder-img .desktop {
+        display: none;
+    }
+
+    .placeholder-img .mobile {
         display: block;
     }
 
