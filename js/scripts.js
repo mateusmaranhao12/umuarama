@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function setupIndicators() {
         // Determina o número de imagens por slide
-        const slidesToShow = window.innerWidth <= 768 ? 1 : 4
+        const slidesToShow = window.innerWidth <= 768 ? 2 : 4
         const totalSlides = Math.ceil(items.length / slidesToShow)
 
         // Limpa os indicadores anteriores
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateCarousel() {
-        const slidesToShow = window.innerWidth <= 768 ? 1 : 4
+        const slidesToShow = window.innerWidth <= 768 ? 2 : 4
         const slideWidth = items[0].offsetWidth
         track.style.transform = `translateX(-${currentSlide * slideWidth * slidesToShow}px)`
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function autoSlide() {
-        const slidesToShow = window.innerWidth <= 768 ? 1 : 4
+        const slidesToShow = window.innerWidth <= 768 ? 2 : 4
         const totalSlides = Math.ceil(items.length / slidesToShow)
 
         // Avança para o próximo slide
@@ -76,33 +76,63 @@ document.addEventListener('DOMContentLoaded', function () {
 //imagem index
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carousel-track')
-    const images = document.querySelectorAll('.hero-image')
     const prevButton = document.querySelector('.prev')
     const nextButton = document.querySelector('.next')
 
+    let images
     let currentIndex = 0
-    const totalImages = images.length
+    let autoSlideTimeout
+
+    function updateImages() {
+        // Determina se é desktop ou mobile e atualiza a lista de imagens
+        images = window.innerWidth <= 768
+            ? document.querySelectorAll('.hero-image.mobile')
+            : document.querySelectorAll('.hero-image.desktop')
+
+        currentIndex = 0 // Reinicia o índice ao trocar de contexto (desktop/mobile)
+        updateCarousel()
+    }
 
     function updateCarousel() {
+        if (images.length === 0) return
         const slideWidth = images[0].offsetWidth
         track.style.transform = `translateX(-${currentIndex * slideWidth}px)`
     }
 
-    // Evento para o botão anterior
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % images.length
+        updateCarousel()
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1
+        updateCarousel()
+    }
+
+    function autoSlide() {
+        nextSlide()
+        autoSlideTimeout = setTimeout(autoSlide, 5000) // Muda a cada 5 segundos
+    }
+
+    function resetAutoSlide() {
+        clearTimeout(autoSlideTimeout)
+        autoSlideTimeout = setTimeout(autoSlide, 5000)
+    }
+
     prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1
-        updateCarousel()
+        prevSlide()
+        resetAutoSlide()
     })
 
-    // Evento para o botão próximo
     nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0
-        updateCarousel()
+        nextSlide()
+        resetAutoSlide()
     })
 
-    // Atualiza o carrossel ao redimensionar
-    window.addEventListener('resize', updateCarousel)
+    // Atualiza ao redimensionar a tela
+    window.addEventListener('resize', updateImages)
 
     // Inicializa o carrossel
-    updateCarousel()
+    updateImages()
+    autoSlideTimeout = setTimeout(autoSlide, 5000)
 })

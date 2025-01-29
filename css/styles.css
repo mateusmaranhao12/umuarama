@@ -131,24 +131,6 @@ body {
     opacity: 1;
 }
 
-/* Ajustes para telas mobile */
-@media (max-width: 768px) {
-    .hero-container {
-        height: auto;
-    }
-
-    .hero-image {
-        height: auto;
-        object-fit: contain;
-        /* Mostra a imagem inteira em mobile */
-    }
-
-    .navigation-icons {
-        top: auto;
-        bottom: 20px;
-    }
-}
-
 
 /*Imagens*/
 
@@ -200,22 +182,6 @@ body {
 
 .custom-indicator.active {
     background-color: #333;
-}
-
-/* Ajuste para Mobile */
-@media (max-width: 768px) {
-    .custom-carousel-item {
-        flex: 0 0 100%;
-        /* Exibe 1 imagem por vez no mobile */
-    }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .carousel-item {
-        min-width: 100%;
-        /* 1 imagem no mobile */
-    }
 }
 
 /*Ultimas noticias*/
@@ -639,8 +605,37 @@ p {
     margin-bottom: 30px;
 }
 
+/*Imagens Mobile e desktop*/
+.hero-image.desktop {
+    display: block;
+}
+
+.hero-image.mobile {
+    display: none;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
+
+    .custom-carousel-item {
+        flex: 0 0 50%;
+        /* Exibe 1 imagem por vez no mobile */
+    }
+
+    .hero-image.desktop {
+        display: none;
+    }
+
+    .hero-image.mobile {
+        display: block;
+    }
+
+    .custom-navbar .navbar-nav,
+    .custom-navbar .nav-icones {
+        background-color: rgba(0, 36, 25, 0.9);
+        padding: 20px;
+    }
+
     .custom-navbar .nav-link {
         text-align: center;
     }
@@ -700,5 +695,37 @@ p {
 
     .galeria-imagens-blog .btn-outline-secondary {
         margin-bottom: 30px;
+    }
+
+    .hero-container {
+        height: auto;
+    }
+
+    .hero-image {
+        height: auto;
+        object-fit: contain;
+        /* Mostra a imagem inteira em mobile */
+    }
+
+    .navigation-icons {
+        top: auto;
+        bottom: 20px;
+    }
+
+    .ultimas-noticias h2 {
+        font-size: 3rem;
+    }
+
+    .ultimas-noticias.atualizacoes {
+        font-size: 1.5rem;
+    }
+
+    .ultimas-noticias.noticia-texto {
+        font-size: 1.5rem;
+    }
+
+    .galeria img {
+        height: 200px;
+        object-fit: cover;
     }
 }
