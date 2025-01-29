@@ -622,6 +622,14 @@ p {
     display: none;
 }
 
+.blog-materias-desktop {
+    display: block;
+}
+
+.blog-materias-mobile {
+    display: none;
+}
+
 /* responsividade */
 @media (max-width: 768px) {
 
@@ -643,6 +651,14 @@ p {
     }
 
     .placeholder-img .mobile {
+        display: block;
+    }
+
+    .blog-materias-desktop {
+        display: none;
+    }
+
+    .blog-materias-mobile {
         display: block;
     }
 
