@@ -59,6 +59,7 @@ body {
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .btn-gold:hover {
@@ -308,6 +309,7 @@ body {
     font-weight: bold;
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
+    transition: .3s all ease;
 }
 
 .btn-gold:hover {
@@ -323,6 +325,8 @@ body {
     font-weight: bold;
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
+    text-decoration: none;
+    transition: .3s all ease;
 }
 
 .btn-gold-2:hover {
@@ -598,6 +602,41 @@ p {
 
 .galeria-imagens-blog .navegacao .btn-link i {
     font-size: 1.1rem;
+}
+
+/*Shows*/
+.shows {
+    padding: 30px;
+}
+
+.card-shows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-shows img {
+    height: 300px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.card-shows h3 {
+    color: #013220;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+.card-shows p {
+    color: black;
+    flex-grow: 0;
+}
+
+.card-shows .d-flex {
+    margin-top: auto;
+    margin-bottom: 30px;
 }
 
 /* responsividade */
