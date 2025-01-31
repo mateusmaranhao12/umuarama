@@ -190,7 +190,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Faz com que ocupe toda a altura da viewport */
     padding: 20px;
     /* Adiciona espaçamento interno */
     background-color: #f8f8f8;
@@ -220,7 +219,7 @@ body {
 .noticia-card img {
     border-radius: 10px;
     object-fit: cover;
-    height: 180px;
+    height: 280px;
     width: 100%;
     transition: background-color 0.3s ease;
 }
@@ -248,10 +247,11 @@ body {
 /* Estilo para a imagem maior */
 .noticia-card-grande {
     height: 100%;
+    object-fit: cover;
 }
 
 .noticia-card-grande img {
-    height: 380px;
+    height: 580px;
 }
 
 .noticia-texto {
@@ -261,7 +261,7 @@ body {
     right: 10px;
     padding: 10px;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     color: #fff;
     z-index: 2;
 }
@@ -759,5 +759,43 @@ p {
     .galeria img {
         height: 200px;
         object-fit: cover;
+    }
+}
+
+/*Ajustes para ipads pro e intermediarios*/
+@media (max-width: 1024px) {
+    .navbar-nav {
+        flex-direction: row; /* Mantém os itens na horizontal */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-icones {
+        justify-content: center;
+    }
+
+    .btn-gold {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+/*ajustes para ipad mini*/
+@media (max-width: 834px) {
+    .navbar-nav {
+        flex-direction: row; /* Mantém os links na horizontal */
+        gap: 20px; /* Aumenta o espaçamento entre os links */
+        justify-content: center;
+        font-size: 14px; /* Diminui um pouco a fonte para melhor encaixe */
+    }
+
+    .nav-icones {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .btn-gold {
+        font-size: 12px;
+        padding: 5px 12px;
     }
 }
